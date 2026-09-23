@@ -14,19 +14,23 @@ public class MenuUI : MonoBehaviour
         _aSource = GetComponent<AudioSource>();
         
     }
-    public void StartGame() { 
-        _aSource.PlayOneShot(_clip);
-        StartCoroutine(Delay(_clip.length));
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); 
+    public void StartGame() {
+        StartCoroutine(GameDelay(0.12f));
     }
-    public void QuitGame() { 
-        _aSource.PlayOneShot(_clip);
-        StartCoroutine(Delay(_clip.length));
-            Application.Quit(); 
+    public void QuitGame() {
+        StartCoroutine(QuitDelay(0.12f));
     }
 
-    private IEnumerator  Delay(float _time)
+    private IEnumerator  QuitDelay(float _time)
     {
+        _aSource.PlayOneShot(_clip);
         yield return new WaitForSeconds(_time);
+        Application.Quit();
+    }
+    private IEnumerator GameDelay(float _time)
+    {
+        _aSource.PlayOneShot(_clip);
+        yield return new WaitForSeconds(_time);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

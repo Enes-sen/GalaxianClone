@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -33,10 +34,38 @@ public class UiController : MonoBehaviour
             HShips[_CurrentH].gameObject.SetActive(false);
         }
     }
-    public void RestartGameB() { SFXManager.Instance.PlayOnShot(); OnStateSet?.Invoke(GameState.Start); SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); }
-    public void MainMenuB() { SFXManager.Instance.PlayOnShot(); OnStateSet?.Invoke(GameState.Start); SceneManager.LoadScene(0); }
-    public void ResumeB() { SFXManager.Instance.PlayOnShot(); OnStateSet?.Invoke(GameState.Resume); }
-    public void GalaxyLeaveB() { SFXManager.Instance.PlayOnShot(); Application.Quit();}
+    public void RestartGameB() { StartCoroutine(RestartDelay(0.12f)); }
+    public void MainMenuB() { StartCoroutine(MenuDelay(0.12f)); }
+    public void ResumeB() { StartCoroutine(ResumeDelay(0.12f)); }
+    public void GalaxyLeaveB() { StartCoroutine(QuitDelay(0.12f)); }
+
+    private IEnumerator QuitDelay(float time)
+    {
+        SFXManager.Instance.PlayOnShot();
+        yield return new WaitForSeconds(time);
+       Application.Quit();
+    }
+    private IEnumerator ResumeDelay(float time)
+    {
+        SFXManager.Instance.PlayOnShot();
+        yield return new WaitForSeconds(time); 
+        OnStateSet?.Invoke(GameState.Resume);
+    }
+    private IEnumerator MenuDelay(float time)
+    {
+        SFXManager.Instance.PlayOnShot();
+        yield return new WaitForSeconds(time);
+        OnStateSet?.Invoke(GameState.Start); 
+        SceneManager.LoadScene(0);
+    }
+    private IEnumerator RestartDelay(float time)
+    {
+        SFXManager.Instance.PlayOnShot();
+        yield return new WaitForSeconds(time);
+        OnStateSet?.Invoke(GameState.Start); 
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     private void WhenStateChange(GameState state)
     {
         switch (state)
