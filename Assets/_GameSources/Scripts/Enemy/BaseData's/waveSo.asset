@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80bebc0e13931fe42954e384cb980a79, type: 3}
+  m_Name: waveSo
+  m_EditorClassIdentifier: 
+  RawEnemies:
+  - {fileID: 11400000, guid: 5798cddb2af1dbf49b2ba8123d1a2762, type: 2}
+  - {fileID: 11400000, guid: b4d65ea501c70834788d7e45e3f4fdef, type: 2}
+  - {fileID: 11400000, guid: 04947f7800e0f1f458dbe8f008a4f0ed, type: 2}
+  - {fileID: 11400000, guid: b4a28a9a9a7e08c47bb06ce021e0ac81, type: 2}
+  - {fileID: 11400000, guid: b4a28a9a9a7e08c47bb06ce021e0ac81, type: 2}
+  - {fileID: 11400000, guid: b4a28a9a9a7e08c47bb06ce021e0ac81, type: 2}

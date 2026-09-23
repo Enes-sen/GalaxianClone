@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e989d52f5a8430e4b81556601300199b, type: 3}
+  m_Name: playerSo
+  m_EditorClassIdentifier: 
+  MaxHealth: 3
+  MinHealth: 0
+  Speed: 33
+  ExpType: 5
+  FrameRate: 0.05
+  Frames:
+  - {fileID: -158348035, guid: c37364f82eee440409e65fd784398adf, type: 3}
+  - {fileID: -274245898, guid: c37364f82eee440409e65fd784398adf, type: 3}
+  - {fileID: -717611069, guid: c37364f82eee440409e65fd784398adf, type: 3}
+  - {fileID: -1127214252, guid: c37364f82eee440409e65fd784398adf, type: 3}
