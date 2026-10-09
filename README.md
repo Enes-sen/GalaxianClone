@@ -71,7 +71,7 @@ Assets/
 | Eylem | Klavye / Girdi |
 | :--- | :--- |
 | **Sola / Sağa Hareket** | `A / D` veya `Sol / Sağ Yön Tuşları` |
-| **Ateş Etme** | `Space (Boşluk Tuşu)` |
+| **Ateş Etme** | `Space (Boşluk Tuşu)`/ X tuşu |
 
 ---
 
