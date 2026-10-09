@@ -72,7 +72,6 @@ Assets/
 | :--- | :--- |
 | **Sola / Sağa Hareket** | `A / D` veya `Sol / Sağ Yön Tuşları` |
 | **Ateş Etme** | `Space (Boşluk Tuşu)` |
-| **Dokunmatik (Mobil)** | Ekran üzeri dokunma ve sürükleme desteği |
 
 ---
 
